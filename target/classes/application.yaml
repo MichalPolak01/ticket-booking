@@ -6,9 +6,12 @@
 #
 ## https://docs.camunda.io/docs/apis-tools/spring-zeebe-sdk/getting-started/
 ## https://docs.camunda.io/docs/apis-tools/spring-zeebe-sdk/configuration/
-#
 
 spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
   datasource:
     url: jdbc:postgresql://195.150.230.208:5432/2023_polak_michal?currentSchema=ticket_booking
     username: 2023_polak_michal
@@ -33,6 +36,9 @@ camunda:
       client-secret: srdrNn_7MVX7I5Qeyt.kXJti-.4iIHhOM6JIW7fuOpT9X-kEZ.GEUGo94eeoNjMi
     cluster-id: 84eaee38-4bb9-4ed7-b5dc-4395bc8bb99f
     region: bru-2
+
+
+
 #  bpm:
 #    enforce-ttl: true
 #    default-history-time-to-live: 30
