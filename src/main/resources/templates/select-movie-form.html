@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select a Movie</title>
+</head>
+<body>
+<h1>Available Movies</h1>
+<form method="post" action="/submit-selected-movie">
+    <ul>
+        <li th:each="movie : ${movies}">
+            <input type="radio" th:name="selectedMovie" th:value="${movie.id}" required />
+            <span th:text="${movie.title} + ' (' + ${movie.genre} + ') - ' + ${movie.duration} + ' minutes'"></span>
+        </li>
+    </ul>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

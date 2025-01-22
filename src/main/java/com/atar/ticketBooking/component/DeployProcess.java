@@ -14,7 +14,7 @@ public class DeployProcess implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         zeebeClient.newDeployCommand()
-                .addResourceFromClasspath("process.bpmn") // Ścieżka do Twojego BPMN
+                .addResourceFromClasspath("process.bpmn")
                 .send()
                 .join();
 

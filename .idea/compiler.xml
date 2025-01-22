@@ -15,16 +15,17 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="bpmn" />
+        <module name="ticket-booking" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ticket-booking" target="17" />
+      <module name="bpmn" target="20" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bpmn" options="-parameters" />
+      <module name="ticket-booking" options="-parameters" />
     </option>
   </component>
 </project>
